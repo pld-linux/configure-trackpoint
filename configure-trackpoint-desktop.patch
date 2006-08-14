@@ -1,0 +1,17 @@
+--- configure-trackpoint-0.3.3.orig/configure-trackpoint.desktop	2006-04-14 13:45:06.000000000 +0200
++++ configure-trackpoint-0.3.3/configure-trackpoint.desktop	2006-08-14 02:15:56.000000000 +0200
+@@ -1,10 +1,12 @@
+ [Desktop Entry]
+ Name=Configure TrackPoint
++Name[pl]=Konfiguruj TrackPointa
+ Comment=TrackPoint Configuration Tool
+-Icon=trackpoint.png
++Comment[pl]=Narzêdzie konfiguracyjne TrackPointa
++Icon=trackpoint
+ Exec=configure-trackpoint
+ Type=Application
+ Terminal=false
+ Encoding=UTF-8
+ StartupNotify=true
+-Categories=GNOME;Application;Settings;HardwareSettings;System;SystemSetup;
++Categories=GTK;GNOME;Settings;HardwareSettings;

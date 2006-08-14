@@ -1,0 +1,23 @@
+--- configure-trackpoint-0.3.3.orig/Makefile.am	2005-08-31 20:31:58.000000000 +0200
++++ configure-trackpoint-0.3.3/Makefile.am	2006-08-14 13:10:54.000000000 +0200
+@@ -20,19 +20,7 @@
+ 	      $(INSTALL_DATA) $$pixmap $(DESTDIR)$(datadir)/pixmaps/$(PACKAGE); \
+ 	    fi \
+ 	  done \
+-	fi ;\
+-	for initdir in /etc/rc.d/init.d /etc/init.d; do \
+-		if test -d $$initdir ; then \
+-			for initfile in $(srcdir)/etc/init.d/*; do \
+-				cp -f $$initfile $$initdir/; \
+-			done ; \
+-			if ! test -d /etc/trackpoint; then \
+-				mkdir /etc/trackpoint; \
+-			fi; \
+-			cp $(srcdir)/etc/trackpoint/* /etc/trackpoint/; \
+-		fi; \
+-	done 
+-
++	fi
+ 
+ dist-hook:
+ 	if test -d pixmaps; then \

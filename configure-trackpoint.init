@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# chkconfig: - 20 90
+# description: Starts and stops "trackpoint" - driver for trackpoint device
+#
+# config:  /etc/trackpoint/trackpoint.conf
+
+. /etc/rc.d/init.d/functions
+
+case $1 in
+  start|restart|reload|force-reload)
+	show "Starting trackpoint services:..."
+	busy
+	if [ -f /sys/devices/platform/i8042/serio0/press_to_select ]; then
+		/etc/trackpoint/trackpoint.conf
+		ok
+	else
+		fail
+	fi
+	;;
+  stop)
+	exit 0
+	;;
+  *)
+	msg_usage "$0 {start|stop|restart|reload|force-reload|status}"
+	exit 3
+	;;
+esac
