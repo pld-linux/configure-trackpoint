@@ -48,7 +48,7 @@ install -d $RPM_BUILD_ROOT{/etc/rc.d/init.d,%{_sysconfdir}/%{_name}}
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/rc.d/init.d/%{_name}
 install etc/trackpoint/trackpoint.conf $RPM_BUILD_ROOT%{_sysconfdir}/%{_name}/%{_name}.conf
 > $RPM_BUILD_ROOT%{_sysconfdir}/%{_name}/%{_name}.conf.bak
-ln -sf %{name}/%{_name}.png $RPM_BUILD_ROOT%{_pixmapsdir}/%{_name}.png
+ln -sf %{name}/%{_name}.png $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
 
 %clean
 rm -rf $RPM_BUILD_ROOT
