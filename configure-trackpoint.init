@@ -1,9 +1,10 @@
 #!/bin/sh
 #
-# chkconfig: - 20 90
-# description: Starts and stops "trackpoint" - driver for trackpoint device
+# chkconfig:	2345 20 90
 #
-# config:  /etc/trackpoint/trackpoint.conf
+# description:	Starts and stops "trackpoint" - driver for trackpoint device
+#
+# config:	/etc/trackpoint/trackpoint.conf
 
 . /etc/rc.d/init.d/functions
 
