@@ -10,7 +10,7 @@
 
 case $1 in
   start|restart|reload|force-reload)
-	show "Starting trackpoint services:..."
+	show "Starting trackpoint service"
 	busy
 	if [ -f /sys/devices/platform/i8042/serio0/press_to_select ]; then
 		/etc/trackpoint/trackpoint.conf
