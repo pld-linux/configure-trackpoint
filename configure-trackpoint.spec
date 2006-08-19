@@ -1,5 +1,6 @@
 #
-%bcond_without	gnome	# dont build gnome configurator
+# Conditional build:
+%bcond_without	gnome	# don't build gnome configurator
 #
 %define		_name	trackpoint
 Summary:	TrackPoint configuration service for IBM laptops
@@ -14,12 +15,17 @@ Source0:	http://dl.sourceforge.net/tpctl/%{name}-%{version}.tar.gz
 Source1:	%{name}.init
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-makefile.patch
-URL:		http://tpctl.sourceforge.net/http://tpctl.sourceforge.net/
+URL:		http://tpctl.sourceforge.net/
+%if %{with gnome}
 BuildRequires:	autoconf
 BuildRequires:	automake
-%{?with_gnome:BuildRequires:	libgnomeui-devel}
+BuildRequires:	libgnomeui-devel
+BuildRequires:	pkgconfig
+%endif
 Requires(post,preun):	/sbin/chkconfig
-#Requires:	kernel >= 2.6.11 (with trackpoint subsystem via sysfs)
+Requires:	rc-scripts
+# trackpoint subsystem via sysfs
+#Requires:	uname(release) >= 2.6.11
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
