@@ -4,7 +4,7 @@
 #
 %define		_name	trackpoint
 Summary:	TrackPoint configuration service for IBM laptops
-Summary(pl.UTF-8):   Usługa konfigurująca TrackPointa do laptopów IBM
+Summary(pl.UTF-8):	Usługa konfigurująca TrackPointa do laptopów IBM
 Name:		configure-trackpoint
 Version:	0.3.3
 Release:	2
@@ -37,7 +37,7 @@ Usługa konfigurująca TrackPointa do laptopów IBM.
 
 %package gnome
 Summary:	GNOME TrackPoint configuration tool for IBM laptops
-Summary(pl.UTF-8):   Narzędzie konfiguracyjne TrackPointa do laptopów IBM
+Summary(pl.UTF-8):	Narzędzie konfiguracyjne TrackPointa do laptopów IBM
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 
